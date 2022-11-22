@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body onload="setCookie()">
+
+<h1>nm794</h1>
+<h2 >this is my home page <b></b></h2>
+<p>Please reload the page using <b>F5</b></p>
+
+<script>
+    document.onkeydown = fkey;
+    document.onkeypress = fkey
+    document.onkeyup = fkey;
+
+    var wasPressed = false;
+
+    function fkey(e){
+        e = e || window.event;
+        if( wasPressed ) return;
+
+        if (e.keyCode == 116) {
+            var x = document.cookie;
+            alert("your cookie is "+ x);
+//wasPressed = true;
+        }else {
+            alert("Window closed");
+        }
+    }
+
+    function setCookie() {
+        document.cookie ="username=nm794@njit.edu";
+    }
+</script>
+<footer>
+    <p>&copy; 2022, navya sri, nm794@njit.edu</p>
+</footer>
+</body>
+</html>
+
